@@ -14,7 +14,6 @@ for v in ${app_version[@]};do
   rm -f dat/${app}_${v}.tsv log/${app}_${v}.log
   ab -c ${c} -n ${n} -g dat/${app}_${v}.tsv ${url} | tee log/${app}_${v}.log
 done
-exit
 
 # draw response time
 echo "set terminal png" > plot
